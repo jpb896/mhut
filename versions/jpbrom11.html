@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>jpbROM11 Update Tracker</title>
+		<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="bg-white text-black dark:bg-gray-900 dark:text-white">	
+	<div class="p-5">
+	<div class="text-4xl font-semibold text-gray-900 dark:text-white">jpbROM11</div>
+	<div class="text-lg font-semibold text-gray-900 dark:text-white">The Android 11 Security Patch Backport Project.</div>
+	</div>
+	<div class="m-3 p-5 border border-gray-100 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+    <div class="flex justify-between mb-1">
+  <span class="text-base font-medium text-blue-700 dark:text-white">Start date</span>
+  <span class="text-sm font-medium text-blue-700 dark:text-white">End date</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+  <div class="bg-yellow-600 h-2.5 rounded-full" id="progress4"></div>
+</div>
+</div>	
+<script>
+    var now = new Date();
+	var startOfYear4 = new Date(2025, 2, 28);
+    var endOfYear4 = new Date(2028, 1, 5);
+if ((now - startOfYear4) < 0) {
+    var progress4 = 0;
+  } else {
+    var progress4 = ((now - startOfYear4) / (endOfYear4 - startOfYear4)) * 100;
+ }
+	if (progress4 > 100) {
+		progress4 = 100;
+	}
+    document.getElementById('progress4').style.width = progress4.toFixed(2) + '%';
+  </script>
+</body>
+</html>
