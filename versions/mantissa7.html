@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>hueOS15 Update Tracker</title>
+		<title>MantissaOS7 Update Tracker</title>
 		<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -8,16 +8,13 @@
 	</head>
 	<body class="bg-white text-black dark:bg-gray-900 dark:text-white">	
 	<div class="p-5">
-	<div class="text-4xl font-semibold text-gray-900 dark:text-white">hueOS 15</div>
-	<div class="text-lg font-semibold text-gray-900 dark:text-white">The fourth release of jpbROM/hueOS.</div>
+	<div class="text-4xl font-semibold text-gray-900 dark:text-white">MantissaOS 7</div>
+	<div class="text-lg font-semibold text-gray-900 dark:text-white">The seventh release of MantissaOS.</div>
 	</div>
 	<div class="m-3 p-5 border border-gray-100 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
     <div class="flex justify-between mb-1">
   <span class="text-base font-medium text-blue-700 dark:text-white">Start date</span>
   <span class="text-sm font-medium text-blue-700 dark:text-white">End date</span>
-</div>
-<div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-  <div class="bg-blue-600 h-2.5 rounded-full" id="progress"></div>
 </div>
 <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
   <div class="bg-green-600 h-2.5 rounded-full" id="progress2"></div>
@@ -31,15 +28,8 @@
 </div>	
 <script>
     var now = new Date();
-    var startOfYear = new Date(2024, 6, 20);
-    var endOfYear = new Date(2024, 8, 5);
-    var progress = ((now - startOfYear) / (endOfYear - startOfYear)) * 100;
-	if (progress > 100) {
-		progress = 100;
-	}
-    document.getElementById('progress').style.width = progress.toFixed(2) + '%';
-	var startOfYear2 = new Date(2024, 8, 5);
-    var endOfYear2 = new Date(2025, 5, 3);
+	var startOfYear2 = new Date(2025, 1, 10);
+    var endOfYear2 = new Date(2025, 6, 8);
 if ((now - startOfYear2) < 0) {
     var progress2 = 0;
   } else {
@@ -49,7 +39,7 @@ if ((now - startOfYear2) < 0) {
 		progress2 = 100;
 	}
     document.getElementById('progress2').style.width = progress2.toFixed(2) + '%';
-var startOfYear3 = new Date(2025, 5, 3);
+var startOfYear3 = new Date(2025, 6, 8);
     var endOfYear3 = new Date(2028, 1, 5);
 if ((now - startOfYear3) < 0) {
     var progress3 = 0;
